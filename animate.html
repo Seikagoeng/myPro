@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D播放器</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background: url(images/jacky/bg33.jpg) no-repeat ;
+		background-size: cover;
+		overflow: hidden;
+	}
+	ul{
+		width: 140px;
+		height: 140px;
+		position: absolute;
+		bottom: 60px;
+		right: 86px;
+		/*绝对定位垂直居中*/
+		/*position: absolute;*/
+		/*bottom: 100px;*/
+		/*left: 50%;*/
+		/*margin-left: -100px;*/
+		transform-style: preserve-3d;
+		/*transform: rotateX(-15deg);*/
+		animation: faded 6s linear 0s infinite normal;
+
+	}
+	ul:hover{
+		animation-play-state: paused;
+
+	}
+	ul:hover li img{
+		opacity: 0.5;
+	}
+	ul li:hover img{
+		opacity: 1;
+	}
+
+
+	ul li{
+		list-style: none;
+		width: 140px;
+		height: 140px;
+		background-color: black;
+		font-size: 60px;
+		text-align: center;
+		line-height: 140px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	ul li img{
+		width: 140px;
+		height: 140px;
+		border: 4px solid skyblue;
+		box-sizing: border-box;
+	}
+
+	@keyframes faded {
+		from{
+			transform:rotateX(-10deg) rotateY(0deg) ;
+		}
+		to{
+			transform:rotateX(-10deg) rotateY(360deg);
+		}
+	}
+	ul li:nth-child(1){
+		/*background-color:green;*/
+		transform:rotateY(60deg) translateZ(140px);
+	}
+	ul li:nth-child(2){
+		/*background-color:blue;*/
+		transform:rotateY(120deg) translateZ(140px);
+	}
+	ul li:nth-child(3){
+		/*background-color:yellow;*/
+		transform:rotateY(180deg) translateZ(140px);
+	}
+	ul li:nth-child(4){
+		/*background-color:pink;*/
+		transform:rotateY(240deg) translateZ(140px);
+	}
+	ul li:nth-child(5){
+		/*background-color:purple;*/
+		transform:rotateY(300deg) translateZ(140px);
+	}
+	ul li:nth-child(6){
+		/*background-color:gold;*/
+		transform:rotateY(360deg) translateZ(140px);
+	}
+	.xin{
+		width: 133px;
+		height: 117px;
+		position: absolute;
+		left: 50px;
+		bottom: 0px;
+		animation: love 9s linear 0s infinite normal ;
+	}
+	@keyframes love {
+		0%{
+			left: 50px;
+			bottom: 0;
+			opacity: 0.8;
+		}
+		20%{
+			left: 290px;
+			bottom: 300px;
+			opacity: 0;
+		}
+		40%{
+			left: 550px;
+			bottom: 700px;
+			opacity: 0.5;
+		}
+		60%{
+			left: 750px;
+			bottom: 500px;
+			opacity: 0.8;
+		}
+		80%{
+		left: 1400px;
+		bottom: 200px;
+		opacity: 0.2;
+		}
+		100%{
+			left: 1000px;
+			bottom: 0;
+			opacity: 0.8;
+		}
+	}
+
+	.a1{
+
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		opacity: 0.1
+	}
+	.a1:hover{
+		opacity: 0.8
+	}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li> <img src="images/jacky/1.jpg"</li>
+		<li> <img src="images/jacky/2.jpg"</li>
+		<li> <img src="images/jacky/3.jpg"</li>
+		<li> <img src="images/jacky/4.jpg"</li>
+		<li> <img src="images/jacky/5.jpg"</li>
+		<li> <img src="images/jacky/6.jpg"</li>
+	</ul>
+	<img src="images/jacky/xin.png" class="xin">
+
+
+	<div class="a1"><audio src="http://36.250.93.25/file3.data.weipan.cn/127612271/269733f26f08e766d8937b6244cb4c7d08d29878?ip=1495965993,27.38.113.127&ssig=SfLcJERM8n&Expires=1495966593&KID=sae,l30zoo1wmz&fn=Fade-Alan%20Walker.mp3&skiprd=2&se_ip_debug=27.38.113.127&corp=2&from=1221134&wsiphost=local" autoplay="autoplay" controls="controls"loop="loop"></audio></div>
+</body>
+</html>
